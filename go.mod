@@ -1,3 +1,3 @@
-module github.com/dev-anderson/newlogger
+module github.com/Dev-Anderson/NewLogger
 
 go 1.21.1
