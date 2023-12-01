@@ -1,12 +1,14 @@
-package main
+package util
 
-import "time"
+import (
+	"time"
+)
 
-func timeNow() string {
+func TimeNow() string {
 	return time.Now().Format("2006-01-02 15:04:05")
 }
 
-func currentDate() string {
+func CurrentDate() string {
 	t := time.Now()
 	date := t.Format("2006-01-02")
 	return date
