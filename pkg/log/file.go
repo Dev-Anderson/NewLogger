@@ -1,11 +1,9 @@
-package file
+package log
 
 import (
 	"fmt"
 	"log"
 	"os"
-
-	"github.com/Dev-Anderson/NewLogger/internal/util"
 )
 
 func namePath() string {
@@ -17,7 +15,7 @@ func namePath() string {
 }
 
 func nameFile() string {
-	return fmt.Sprintf("%s.log", util.CurrentDate)
+	return fmt.Sprintf("%s.log", currentDate())
 }
 
 func nameAllFile() string {
@@ -48,7 +46,7 @@ func VerifyFileLog() (bool, error) {
 	}
 }
 
-func AddLinesFile(msg string) error {
+func addLinesFile(msg string) error {
 	file, err := os.OpenFile(nameAllFile(), os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0644)
 	if err != nil {
 		return err

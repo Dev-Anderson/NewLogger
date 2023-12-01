@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/Dev-Anderson/NewLogger/internal/file"
+	l "github.com/Dev-Anderson/NewLogger/pkg/log"
 )
 
 func Initialization() {
-	exist, err := file.VerifyFileLog()
+	exist, err := l.VerifyFileLog()
 	if err != nil {
 		log.Panic("Erro ao verificar arquivo de log", err)
 	}
 	if !exist {
-		file.CreateFileLog()
+		l.CreateFileLog()
 	}
 }
 
