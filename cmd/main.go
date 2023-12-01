@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	l "github.com/Dev-Anderson/NewLogger/pkg/log"
+	l "github.com/Dev-Anderson/NewLogger/pkg/NewLogger"
 )
 
 func Initialization() {
