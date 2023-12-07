@@ -1,22 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"log"
-
-	l "github.com/Dev-Anderson/NewLogger/pkg/NewLogger"
+	newlogger "github.com/Dev-Anderson/NewLogger"
 )
 
-func Initialization() {
-	exist, err := l.VerifyFileLog()
-	if err != nil {
-		log.Panic("Erro ao verificar arquivo de log", err)
-	}
-	if !exist {
-		l.CreateFileLog()
-	}
-}
-
 func main() {
-	fmt.Println("Iniciando o projeto")
+	msg := newlogger.LogInfo("Jorge e mateus", "Nao deixe apagar a fogueira do meu coracao")
+	newlogger.GenerateNewLog(msg)
+
 }
